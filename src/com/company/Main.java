@@ -44,7 +44,9 @@ public class Main {
             String clone_colors[] = colors.clone();
             System.out.println("Gib eine Farbenkombination ein...");
             for (int i = 0; i < 4; i++) {
-                eingaben[i] = sc.nextLine();
+                System.out.print(i + 1 + ". " );
+                eingaben[i] = sc.nextLine().toLowerCase();
+                eingaben[i] = eingaben[i].replaceAll("\\s+","");
 
                 switch (eingaben[i]) {
                     case "blau":
@@ -65,7 +67,7 @@ public class Main {
                         break;
                     default:
                         System.out.println("Falsche Eingabe. Bitte gib erneut deine Farben ein.");
-                        i = -1;
+                        i--;
                         break;
                 }
             }
