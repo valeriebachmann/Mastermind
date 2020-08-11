@@ -168,7 +168,6 @@ public class Main {
                     spieldauer = 0;
                     for (int i = 0; i < 4; i++) {
                         int randomNumber = r.nextInt(objects.length);
-                        System.out.println(objects[randomNumber]);
                         colors[i] = (objects[randomNumber]);
                     }
                 } else if (tryagain.equals("nein") || tryagain.equals("Nein")) {
